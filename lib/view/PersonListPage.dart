@@ -4,6 +4,7 @@ import 'package:persona/main.dart';
 import 'package:persona/models/Person.dart';
 import 'package:persona/services/PersonService.dart';
 import 'package:persona/view/PersonPage.dart';
+import 'package:persona/view/PersonaRow.dart';
 
 class PersonListPage extends StatefulWidget {
   PersonListPage({Key key, this.title}) : super(key: key){
@@ -64,31 +65,16 @@ class _PersonListPageState extends State<PersonListPage> {
           itemCount: data == null ? 0 : data.length,
           itemBuilder: (BuildContext context, int index) {
             return Container(
-              child: Center(
-                  child: Column(
-                    // Stretch the cards in horizontal axis
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Card(
-                          child:InkWell(
-                            onTap: ()=>clicked(index),
-                            child: Container(
-                              child: Text(
-                                // Read the name field value and set it in the Text widget
-                                data[index].name,
-                                key: ValueKey("card-"+index.toString()),
-                                // set some style to text
-                                style: TextStyle(
-                                    fontSize: 20.0, color: Colors.lightBlueAccent),
-                              ),
-                              // added padding
-                              padding: const EdgeInsets.all(15.0),
-                            ),
-                          )
-
-                      )
-                    ],
-                  )),
+              height: 100.0,
+              child: InkWell(
+                onTap: ()=>clicked(index),
+                child: Container(
+                  child: PersonRow(data[index],
+                      id: index),
+                  // added padding
+//                              padding: const EdgeInsets.all(15.0),
+                ),
+              )
             );
           }),
     );
