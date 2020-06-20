@@ -6,11 +6,11 @@ void main() {
 
     final seePersonaLink = find.byValueKey('persona');
     final firstPersonaName = find.descendant(of: find.byTooltip("Luke Skywalker"), matching: find.byType("Text"));
-    final secondPersonaNameD = find.ancestor(
+    final secondPersonaNameA = find.ancestor(
         of:find.byValueKey("image-1"),matching: find.byType("Row")
     );
-    final secondPersonaNameA = find.descendant(
-        of:secondPersonaNameD,matching: find.byType("Text")
+    final secondPersonaNameD = find.descendant(
+        of:secondPersonaNameA,matching: find.byType("Text")
     );
     FlutterDriver driver;
 
@@ -35,7 +35,7 @@ void main() {
       expect(await driver.getText(firstPersonaName), "Luke Skywalker");
     });
     test('should show second persona by heirarchy', () async {
-      expect(await driver.getText(secondPersonaNameA), "C-3PO");
+      expect(await driver.getText(secondPersonaNameD), "C-3PO");
     });
     test('should show second persona by text', () async {
       expect(await driver.getText(find.text("C-3PO")), "C-3PO");
