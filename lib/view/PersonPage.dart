@@ -61,36 +61,110 @@ class _PersonPageState extends State<PersonPage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              '${person.name}',
-              style: TextStyle(
-                  fontSize: 18.0, color: Colors.lightBlueAccent
+            Container(
+              key: ValueKey("image"),
+              height: 300.0,
+              width: 300.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/icons/persona/LSW.png'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.circle,
               ),
-              key: ValueKey("name"),
             ),
-            Text(
-              '${person.hair_color}',
-              style: TextStyle(
-                  fontSize: 18.0, color: Colors.lightBlueAccent
-              ),
-              key: ValueKey("hair_color"),
+
+            Container(
+              padding: const EdgeInsets.all(5.0),
+                child:Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "Name: ",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.deepPurple
+                      ),
+                    ),
+                    Text(
+                      '${person.name}',
+                      style: TextStyle(
+                          fontSize: 18.0, color: Colors.lightBlueAccent
+                      ),
+                      key: ValueKey("name"),
+                    )
+                  ]
+                )
             ),
-            Text(
-              '${person.skin_color}',
-              style: TextStyle(
-                  fontSize: 18.0, color: Colors.lightBlueAccent
-              ),
-              key: ValueKey("skin_color"),
+            Container(
+                padding: const EdgeInsets.all(5.0),
+                child:Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Hair Color: ",
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.deepPurple
+                        ),
+                      ),
+                      Text(
+                        '${person.hair_color}',
+                        style: TextStyle(
+                            fontSize: 18.0, color: Colors.lightBlueAccent
+                        ),
+                        key: ValueKey("hair_color"),
+                      )
+                    ]
+                )
             ),
-            Text(
-              '${person.eye_color}',
-              style: TextStyle(
-                  fontSize: 18.0, color: Colors.lightBlueAccent
-              ),
-              key: ValueKey("eye_color"),
+            Container(
+                padding: const EdgeInsets.all(5.0),
+                child:Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Eye Color: ",
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.deepPurple
+                        ),
+                      ),
+                      Text(
+                        '${person.eye_color}',
+                        style: TextStyle(
+                            fontSize: 18.0, color: Colors.lightBlueAccent
+                        ),
+                        key: ValueKey("eye_color"),
+                      )
+                    ]
+                )
             ),
+            Container(
+                padding: const EdgeInsets.all(5.0),
+                child:Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Skin Color: ",
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.deepPurple
+                        ),
+                      ),
+                      Text(
+                        '${person.skin_color}',
+                        style: TextStyle(
+                            fontSize: 18.0, color: Colors.lightBlueAccent
+                        ),
+                        key: ValueKey("skin_color"),
+                      )
+                    ]
+                )
+            )
           ],
         ),
       )
