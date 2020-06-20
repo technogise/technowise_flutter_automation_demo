@@ -37,6 +37,9 @@ void main() {
     test('should show second persona by heirarchy', () async {
       expect(await driver.getText(secondPersonaNameA), "C-3PO");
     });
+    test('should show second persona by text', () async {
+      expect(await driver.getText(find.text("C-3PO")), "C-3PO");
+    });
 
   });
 }
