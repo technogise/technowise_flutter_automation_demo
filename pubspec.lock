@@ -116,13 +116,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.7+6"
-  flutter_gherkin_addons:
-    dependency: "direct dev"
-    description:
-      name: flutter_gherkin_addons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.5"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -238,13 +231,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.6+3"
-  mock_web_server:
-    dependency: transitive
-    description:
-      name: mock_web_server
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.1.1"
   multi_server_socket:
     dependency: transitive
     description:

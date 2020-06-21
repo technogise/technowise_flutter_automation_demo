@@ -40,7 +40,7 @@ class VerifyPersonsList extends When1WithWorld<Table, FlutterWorld> {
 
       await world.driver.scrollUntilVisible(
           find.byType('ListView'), find.text(person),
-          dxScroll: 0.0, dyScroll: -300, timeout: const Duration(seconds: 10));
+          dxScroll: 0.0, dyScroll: -300, timeout: const Duration(seconds: 20));
 
       bool isPersonDisplayed =
           await FlutterDriverUtils.isPresent(find.text(person), world.driver);
