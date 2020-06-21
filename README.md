@@ -16,10 +16,19 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 # technowise_flutter_automation_demo
 
-## Run the integration test using command:
+### Run the integration test using command:
 
-  `flutter drive --driver=test_driver/app_test.dart --target=test_driver/app.dart`
+    `flutter drive --driver=test_driver/app_test.dart --target=test_driver/app.dart`
   
-##  Run the gherkin  test using command:  
+###  Run the gherkin  test using command:  
 
-   `flutter drive --driver=test_driver/gherkin_test.dart --target=test_driver/app.dart`
+     `flutter drive --driver=test_driver/gherkin_test.dart --target=test_driver/app.dart`
+
+#### To generate an HTML report 
+We would need to install the cucumber-html-reporter -
+
+       `npm install cucumber-html-reporter --save-dev`
+And run the command - 
+
+       `node test_driver/html_report_generator.js` 
+       
