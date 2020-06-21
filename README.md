@@ -15,3 +15,11 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # technowise_flutter_automation_demo
+
+## Run the integration test using command:
+
+  `flutter drive --driver=test_driver/app_test.dart --target=test_driver/app.dart`
+  
+##  Run the gherkin  test using command:  
+
+   `flutter drive --driver=test_driver/gherkin_test.dart --target=test_driver/app.dart`
